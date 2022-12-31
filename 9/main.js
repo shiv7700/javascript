@@ -1,12 +1,12 @@
 // functions in js 
 
-// function table(){
-//     for(let i=1; i<=10; i++){
-//         // console.log(i*2);
-//         document.write(`2 X ${i} = ${2*2}`);
-//         document.write("<br>");
-//     }
-// }
+function table(){
+    for(let i=1; i<=10; i++){
+        // console.log(i*2);
+        document.write(`2 X ${i} = ${2*2}`);
+        document.write("<br>");
+    }
+}
 
 // table();
 // document.write("<br>");
@@ -31,13 +31,13 @@ t(20);
 document.write('<br>');
 t(100);
 
-// function add(a,b){
-//     document.write(`${a+b}`);
-//     document.write("<br>");
-//     document.write(a+b);
-// }
+function add(a,b){
+    document.write(`${a+b}`);
+    document.write("<br>");
+    document.write(a+b);
+}
 
-// add(2,5);
+add(2,5);
 
 // argument is object we can use this as array
 
@@ -81,6 +81,61 @@ function back(a,b){
 
 let f=back(4,5);
 console.log(f);
+
+// global and local
+
+let go="global variable";     //global
+
+function add(){
+    let lo="local variable";        //local       
+}
+
+{
+    let a="local";
+}
+
+// console.log(a);
+
+
+// anonymous function : function without name
+
+// function expression
+let show = function () {
+    console.log("Anonymous Function");
+};
+
+show();
+
+function seek(){
+    console.log("Set timeout after some millisecodns");
+}
+
+// setTimeout(seek,3000);
+
+
+setTimeout(function seek(){
+    console.log("Set timeout after some millisecodns");
+},5000)
+setTimeout(FunctionName,time)
+
+immediately invoked function : create and use at same place
+
+(function(){
+    console.log("Testing...");
+    alert("Tester...");
+})();
+
+let same="my own code";
+
+console.log(same);
+
+
+
+
+
+
+
+
 
 
 
